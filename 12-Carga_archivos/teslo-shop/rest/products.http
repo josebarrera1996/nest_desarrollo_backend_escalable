@@ -1,0 +1,43 @@
+POST http://localhost:3000/api/products
+Content-Type: application/json
+
+{
+    "title": "New Product",
+    "slug": "new_product",
+    "sizes": ["SM", "M", "L"],
+    "gender": "men",
+    "tags": ["nuevo", "tag"]
+}
+
+################################################################
+
+GET http://localhost:3000/api/products
+
+################################################################
+
+GET http://localhost:3000/api/products?offset=0&limit=5
+
+################################################################
+
+GET http://localhost:3000/api/products?offset=0&limit=10
+
+################################################################
+
+GET http://localhost:3000/api/products/9921f67a-0c19-41bd-a1f1-1405f5b79cd7
+
+################################################################
+
+GET http://localhost:3000/api/products/new_product
+
+################################################################
+
+GET http://localhost:3000/api/products/New%20Product
+
+################################################################
+
+PATCH http://localhost:3000/api/products/9921f67a-0c19-41bd-a1f1-1405f5b79cd7
+Content-Type: application/json
+
+{
+    "tags": ["material", "actualizado"]
+}

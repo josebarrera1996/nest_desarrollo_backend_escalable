@@ -1,0 +1,37 @@
+GET http://localhost:3000/api/pokemon
+
+################################################################
+
+POST http://localhost:3000/api/pokemon
+Content-Type: application/json
+
+{
+    "name": "Charmander",
+    "number": 4
+}
+
+################################################################
+
+GET http://localhost:3000/api/pokemon/4
+
+################################################################
+
+GET http://localhost:3000/api/pokemon/63dab2df106b7e1f132cc658
+
+################################################################
+
+GET http://localhost:3000/api/pokemon/charmander
+
+################################################################
+
+PATCH http://localhost:3000/api/pokemon/1
+Content-Type: application/json
+
+{
+    "name": "Bulbasaur actualizado",
+    "number": 1
+}
+
+################################################################
+
+DELETE http://localhost:3000/api/pokemon/63dab2df106b7e1f132cc658

@@ -1,0 +1,43 @@
+@base_url = http://localhost:3000/api/auth
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJmNDczZGExLTg4MzMtNGI3Zi04MWNjLWVmNjdkYWQxNzVmNCIsImlhdCI6MTY4MTA5MTkxMywiZXhwIjoxNjgxMDk5MTEzfQ.6lAt9Ry0Xuy7iQkVbaOpWebCFa4QeZ7OwN087e5wBmw
+
+################################################################
+
+POST {{base_url}}/register
+Content-Type: application/json
+
+{
+    "email": "test0@user.com",
+    "password": "Test-user0",
+    "fullName": "Test User 0"
+}
+
+################################################################
+
+POST {{base_url}}/login
+Content-Type: application/json
+
+{
+    "email": "test@user.com",
+    "password": "Test-user0"
+}
+
+################################################################
+
+GET {{base_url}}/private-testing
+Authorization: Bearer {{token}}
+
+################################################################
+
+GET {{base_url}}/private-testing-2
+Authorization: Bearer {{token}}
+
+################################################################
+
+GET {{base_url}}/private-testing-3
+Authorization: Bearer {{token}}
+
+################################################################
+
+GET {{base_url}}/check-status
+Authorization: Bearer {{token}}

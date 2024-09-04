@@ -1,0 +1,38 @@
+GET http://localhost:3000/cars
+
+######################################################
+
+GET http://localhost:3000/cars/2ea93b00-83c8-42f8-a141-099d284c5479
+
+######################################################
+
+POST http://localhost:3000/cars
+Content-Type: application/json
+
+{
+    "brand": "Nuevo",
+    "model": "Nuevo"
+}
+
+######################################################
+
+PATCH http://localhost:3000/cars/31506d64-d36c-40a5-bad6-122e4041dc92
+Content-Type: application/json
+
+{
+    "brand": "Actualizado total",
+    "model": "Actualizado total"
+}
+
+######################################################
+
+PATCH http://localhost:3000/cars/31506d64-d36c-40a5-bad6-122e4041dc92
+Content-Type: application/json
+
+{
+    "model": "Actualizado parcial"
+}
+
+######################################################
+
+DELETE http://localhost:3000/cars/31506d64-d36c-40a5-bad6-122e4041dc92

@@ -1,0 +1,27 @@
+GET http://localhost:3000/brands
+
+######################################################
+
+GET http://localhost:3000/brands/b6c7b2de-b72a-46bb-8583-1d7118566faa
+
+######################################################
+
+POST http://localhost:3000/brands
+Content-Type: application/json
+
+{
+    "name": "Nuevo"
+}
+
+######################################################
+
+PATCH http://localhost:3000/brands/0fcf53c2-7308-49e5-a399-8340cec9f2bd
+Content-Type: application/json
+
+{
+    "name": "Actualizado"
+}
+
+######################################################
+
+DELETE http://localhost:3000/brands/0fcf53c2-7308-49e5-a399-8340cec9f2bd

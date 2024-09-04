@@ -1,0 +1,56 @@
+@base_url = http://localhost:3000/api/products
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkxYWRhNzgwLTc0M2MtNGZiOC1iODU3LTY4MTQwNGIyNGQwMSIsImlhdCI6MTY4MDk5ODI3MSwiZXhwIjoxNjgxMDA1NDcxfQ.EqjpMZfvf-6kVffDxal2FWXTWbqUcK6rFugENLvykZw
+
+################################################################
+
+POST {{base_url}}
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "title": "New Product",
+    "slug": "new_product",
+    "sizes": ["SM", "M", "L"],
+    "gender": "men",
+    "tags": ["nuevo", "tag"]
+}
+
+################################################################
+
+GET {{base_url}}
+Authorization: Bearer {{token}}
+
+################################################################
+
+GET {{base_url}}?offset=0&limit=5
+Authorization: Bearer {{token}}
+
+################################################################
+
+GET {{base_url}}?offset=0&limit=10
+Authorization: Bearer {{token}}
+
+################################################################
+
+GET {{base_url}}/9921f67a-0c19-41bd-a1f1-1405f5b79cd7
+Authorization: Bearer {{token}}
+
+################################################################
+
+GET {{base_url}}/new_product
+Authorization: Bearer {{token}}
+
+################################################################
+
+GET {{base_url}}/New%20Product
+Authorization: Bearer {{token}}
+
+################################################################
+
+PATCH {{base_url}}/9921f67a-0c19-41bd-a1f1-1405f5b79cd7
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "tags": ["material", "actualizado"]
+}

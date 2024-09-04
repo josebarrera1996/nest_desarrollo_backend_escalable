@@ -1,0 +1,7 @@
+@base_url = http://localhost:3000/api/seed
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkxYWRhNzgwLTc0M2MtNGZiOC1iODU3LTY4MTQwNGIyNGQwMSIsImlhdCI6MTY4MDk5ODI3MSwiZXhwIjoxNjgxMDA1NDcxfQ.EqjpMZfvf-6kVffDxal2FWXTWbqUcK6rFugENLvykZw
+
+################################################################
+
+GET {{base_url}}/
+Authorization: Bearer {{token}}
